@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanya Rajesh | Digital Marketing Specialist</title>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: translateX(10px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg') center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border: 5px solid white;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        /* Typing Effect */
+        .typed-text {
+            border-right: 3px solid white;
+            animation: blink 0.75s infinite;
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+
+        /* Project Cards */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Skills Badges */
+        .skill-badge {
+            font-size: 1.1rem;
+            padding: 0.8em 1.2em;
+            margin: 0.5em;
+        }
+
+        /* Scroll to Top Button */
+        #scrollTop {
+            transition: opacity 0.3s ease;
+        }
+
+        /* For extra large devices (Desktops, large screens, 1200px and above) */
+@media (min-width: 1200px) {
+    .moving-text span {
+        animation: move-text 10s linear infinite;
+    }
+}
+
+/* For large devices (Laptops, Desktops, between 992px and 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .moving-text span {
+        animation: move-text 8s linear infinite;
+    }
+}
+
+/* For medium devices (Tablets, between 768px and 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .moving-text span {
+        animation: move-text 6s linear infinite;
+    }
+}
+
+/* For small devices (Portrait tablets, large phones, between 576px and 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .moving-text span {
+        animation: move-text 4s linear infinite;
+    }
+}
+
+/* For extra small devices (Phones, below 576px) */
+@media (max-width: 575px) {
+    .moving-text span {
+        animation: none;
+        white-space: normal;
+    }
+}
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <!-- Logo or Brand Name -->
+        <a class="navbar-brand fw-bold text-warning" href="#">
+    <i class="fa-solid fa-bullhorn text-danger"></i> 
+    Tanya Rajesh <span class="text-info">| Digital Marketing Expert</span>
+</a>
+
+        <!-- Navbar Toggle Button for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about"><i class="fa-solid fa-user"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects"><i class="fa-solid fa-briefcase"></i> Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Hero Section -->
+<header class="hero text-center text-white d-flex align-items-center justify-content-center vh-100">
+    <div class="container" data-aos="fade-up">
+        <img src="profile.png" alt="Tanya Rajesh" class="profile-img mb-4 rainbow-border shadow-lg">
+<style>
+    /* Rainbow Border */
+    .rainbow-border {
+        border-radius: 50%;
+        padding: 5px; /* Space for the border */
+        background: linear-gradient(45deg, 
+            red, orange, yellow, green, blue, indigo, violet, red
+        );
+        background-size: 400% 400%;
+        animation: rainbow 4s linear infinite;
+        display: inline-block;
+    }
+
+    /* Image inside border */
+    .rainbow-border img {
+        display: block;
+        border-radius: 50%;
+        width: 150px;  /* Adjust size */
+        height: 150px; /* Adjust size */
+    }
+
+    /* Rainbow Animation */
+    @keyframes rainbow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Animated Text */
+    .animated-text {
+        font-weight: bold;
+        background-image: linear-gradient(45deg, 
+            red, orange, yellow, green, blue, indigo, violet
+        );
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glowing 3s infinite linear;
+    }
+
+    /* Glow Animation */
+    @keyframes glowing {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+</style>
+		
+		<!-- Name with color animation -->
+        <h1 class="display-4 fw-bold mb-3 animated-text">TANYA RAJESH</h1>
+        
+        <p class="lead fs-3">
+            <span class="typed-text" id="typed-text"></span>
+            <span class="cursor">|</span>
+        </p>
+        <a href="#contact" class="btn btn-light btn-lg mt-3">
+            <i class="fa-solid fa-paper-plane"></i> Get in Touch
+        </a>
+    </div>
+</header>
+
+<!-- CSS for Color Changing Effect -->
+<style>
+    /* Animated Text */
+    .animated-text {
+        font-weight: bold;
+        background-image: linear-gradient(45deg, 
+            #ff0000,  /* Red */
+            #ff7300,  /* Orange */
+            #ffea00,  /* Yellow */
+            #00ff00,  /* Green */
+            #0095ff,  /* Blue */
+            #8a2be2  /* Violet */
+        );
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glowing 3s infinite linear;
+    }
+
+    /* Glow Animation */
+    @keyframes glowing {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+</style>
+
+<!-- About Section -->
+    <section id="about" class="py-5 bg-light" data-aos="fade-up">
+        <div class="container text-center py-5">
+            <h2 class="mb-4"><i class="fa-solid fa-user"></i> About Me</h2>
+            <p class="lead mx-auto" style="max-width: 800px;">
+                Passionate digital marketing specialist with expertise in social media strategy and brand development. 
+                Focused on creating engaging content that drives conversion and builds brand loyalty.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5" data-aos="fade-right">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fa-solid fa-briefcase"></i> Experience</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Social Media Head</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">E-Cell, IIT Bombay</h6>
+                            <p class="card-text">
+                                • Increased social media engagement by 40% through strategic content planning<br>
+                                • Managed a team of 5 content creators and designers<br>
+                                • Developed successful influencer collaboration program
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light" data-aos="fade-left">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fa-solid fa-folder-open"></i> Projects</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Golden Bakes Co.</h5>
+                            <p class="card-text">
+                                • Developed complete social media strategy for bakery startup<br>
+                                • Created brand identity and visual style guide<br>
+                                • Increased Instagram followers by 150% in 3 months
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Cell Annual Conference</h5>
+                            <p class="card-text">
+                                • Managed social media campaign for 5000+ attendees event<br>
+                                • Created viral marketing campaign reaching 1M+ impressions<br>
+                                • Coordinated with 20+ sponsors for promotional activities
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+<style>
+    /* Glowing Animation */
+    @keyframes glow {
+        0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+        50% { box-shadow: 0 0 25px rgba(255, 255, 255, 1); transform: scale(1.1); }
+        100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+    }
+
+    /* Floating Effect */
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .skill-badge {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+        border-radius: 50px;
+        transition: transform 0.3s ease-in-out;
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+        animation: float 3s infinite ease-in-out, glow 1.5s infinite alternate;
+        cursor: pointer;
+    }
+
+    /* Background Gradient Colors */
+    .bg-primary { background: linear-gradient(135deg, #007bff, #00d4ff); }
+    .bg-success { background: linear-gradient(135deg, #28a745, #a6ff00); }
+    .bg-info { background: linear-gradient(135deg, #17a2b8, #00eaff); }
+    .bg-warning { background: linear-gradient(135deg, #ffc107, #ff7300); }
+    .bg-danger { background: linear-gradient(135deg, #dc3545, #ff0077); }
+    .bg-secondary { background: linear-gradient(135deg, #6c757d, #c0c0c0); }
+    .bg-dark { background: linear-gradient(135deg, #343a40, #5a5a5a); }
+
+    /* Hover Effect */
+    .skill-badge:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+    }
+</style>
+
+<section id="skills" class="py-5" data-aos="zoom-in">
+    <div class="container">
+        <h2 class="text-center mb-5"><i class="fa-solid fa-code"></i> Skills</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <span class="skill-badge bg-primary">
+                <i class="fa-solid fa-bullhorn"></i> Social Media Strategy
+            </span>
+            <span class="skill-badge bg-success">
+                <i class="fa-solid fa-pen-nib"></i> Content Creation
+            </span>
+            <span class="skill-badge bg-info">
+                <i class="fa-brands fa-instagram"></i> Instagram Marketing
+            </span>
+            <span class="skill-badge bg-warning">
+                <i class="fa-solid fa-chart-line"></i> Google Analytics
+            </span>
+            <span class="skill-badge bg-danger">
+                <i class="fa-solid fa-lightbulb"></i> Brand Development
+            </span>
+            <span class="skill-badge bg-secondary">
+                <i class="fa-solid fa-code"></i> C Programming
+            </span>
+            <span class="skill-badge bg-dark">
+                <i class="fa-brands fa-python"></i> Python
+            </span>
+            <span class="skill-badge bg-primary">
+                <i class="fa-solid fa-database"></i> MySQL
+            </span>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+<section id="contact" class="py-5 bg-dark text-white" data-aos="fade-up">
+    <div class="container text-center">
+        <h2 class="mb-4"><i class="fa-solid fa-envelope"></i> Let's Connect</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <p class="fs-5">
+                    <i class="fa-solid fa-envelope me-2"></i>
+                    <a href="mailto:tanyarajesh06@gmail.com" class="text-white">tanyarajesh06@gmail.com</a>
+                </p>
+                <p class="fs-5">
+                    <i class="fa-brands fa-linkedin me-2"></i>
+                    <a href="https://www.linkedin.com/in/tanya-rajesh-859ba8320" class="text-white" target="_blank">
+                        LinkedIn Profile
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Chatbot Button -->
+<button id="chatbot-btn">
+    <i class="fa-solid fa-comments"></i> Contact Me
+</button>
+
+<!-- Chatbot Popup -->
+<div id="chatbot-popup">
+    <div id="chatbot-header">
+        <h4>Contact Me</h4>
+        <button id="close-chat">&times;</button>
+    </div>
+    <form id="contact-form" action="https://formsubmit.co/tanyarajesh06@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="success-msg" style="display: none;">Message Sent Successfully! 🎉</p>
+    </form>
+</div>
+
+<!-- Chatbot Styles -->
+<style>
+    /* Floating Chatbot Button */
+    #chatbot-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        color: white;
+        font-size: 18px;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #chatbot-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px white;
+    }
+
+    /* Chatbot Popup */
+    #chatbot-popup {
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 300px;
+        background: #222;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+
+    /* Chatbot Header */
+    #chatbot-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+
+    #chatbot-header h4 {
+        margin: 0;
+    }
+
+    #close-chat {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* Form Inputs */
+    #contact-form input, #contact-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    #contact-form textarea {
+        height: 80px;
+        resize: none;
+    }
+
+    /* Submit Button */
+    #contact-form button {
+        width: 100%;
+        padding: 10px;
+        background: #ff4b2b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    #contact-form button:hover {
+        background: #ff416c;
+    }
+
+    /* Success Message */
+    #success-msg {
+        text-align: center;
+        color: #92fe9d;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+</style>
+
+<!-- Chatbot Script -->
+<script>
+    document.getElementById("chatbot-btn").addEventListener("click", function() {
+        document.getElementById("chatbot-popup").style.display = "block";
+    });
+
+    document.getElementById("close-chat").addEventListener("click", function() {
+        document.getElementById("chatbot-popup").style.display = "none";
+    });
+</script>
+
+
+
+  </p>
+<style>
+    /* Glowing Animation */
+    @keyframes shine {
+        0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); }
+        50% { box-shadow: 0 0 30px rgba(255, 255, 255, 1); }
+        100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); }
+    }
+
+    /* Button Styling */
+    .btn-gradient {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 25px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        border: 2px solid white;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+        background: linear-gradient(45deg, #ff416c, #ff4b2b, #00c9ff, #92fe9d);
+        background-size: 300% 300%;
+        animation: shine 1.5s infinite alternate, gradientMove 6s infinite ease-in-out;
+    }
+
+    /* Gradient Background Animation */
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Hover Effect */
+    .btn-gradient:hover {
+        background: white;
+        color: black;
+        border-color: white;
+        transform: scale(1.1);
+        box-shadow: 0 0 20px white;
+    }
+</style>
+
+<a href="resume.pdf" download class="btn-gradient" aria-label="Download Resume">
+    <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+</a>
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="btn btn-primary rounded-circle shadow-lg" 
+            style="position: fixed; bottom: 30px; right: 30px; display: none; width: 50px; height: 50px;">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Typing Effect -->
+<h2 id="typed-text" class="mt-3 text-center"></h2>
+
+<script>
+    // Typing Effect with Proper Spacing and Animations
+    const texts = [
+        { icon: 'fas fa-microphone', text: 'Social Media Strategist' },
+        { icon: 'fas fa-hashtag', text: 'Digital Marketing Expert' },
+        { icon: 'fas fa-briefcase', text: 'Brand Development Specialist' },
+        { icon: 'fas fa-video', text: 'Content Creator' }
+    ];
+
+    const colors = ["#ff5733", "#33ff57", "#3357ff", "#f033ff", "#ffcc00"];
+    let currentText = 0;
+    const typingElement = document.getElementById("typed-text");
+
+    function typeText() {
+        typingElement.innerHTML = '';
+        typingElement.style.color = colors[currentText % colors.length];
+
+        // Create icon element
+        const icon = document.createElement('i');
+        icon.className = texts[currentText].icon;
+        typingElement.appendChild(icon);
+
+        // Add space after icon
+        typingElement.insertAdjacentHTML('beforeend', '&nbsp;');
+
+        let index = 0;
+        const text = texts[currentText].text;
+
+        function typeCharacter() {
+            if (index < text.length) {
+                typingElement.innerHTML += `<span style="opacity:0">${text[index]}</span>`;
+                setTimeout(() => {
+                    typingElement.lastChild.style.opacity = '1';
+                }, 50);
+                index++;
+                setTimeout(typeCharacter, 100);
+            } else {
+                setTimeout(eraseText, 2000);
+            }
+        }
+
+        typeCharacter();
+    }
+
+    function eraseText() {
+        const spans = typingElement.querySelectorAll('span');
+        if (spans.length > 0) {
+            typingElement.removeChild(spans[spans.length - 1]);
+            setTimeout(eraseText, 50);
+        } else {
+            currentText = (currentText + 1) % texts.length;
+            setTimeout(typeText, 500);
+        }
+    }
+
+    // Initialize
+    AOS.init({ duration: 1000 });
+    typeText();
+</script>
+
+<style>
+    #typed-text {
+        font-weight: bold;
+        font-size: 1.8rem;
+        min-height: 60px;
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradientShift 5s ease infinite;
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    @media (max-width: 768px) {
+        #typed-text {
+            font-size: 1.4rem;
+        }
+    }
+</style>
+</script>
+
+<style>
+    /* Animated Text */
+    .animated-text {
+        font-weight: bold;
+        font-size: 1.8rem;
+        background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glowing 3s infinite linear;
+    }
+
+    /* Glow Animation */
+    @keyframes glowing {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Fade-in animation for letters */
+    .fade-in {
+        display: inline-block;
+        transition: opacity 0.3s ease-in-out;
+    }
+</style>
+
+
+
+
+
+<script>
+
+    // Scroll to Top Button
+    window.onscroll = function() {
+        const scrollTopBtn = document.getElementById('scrollTop');
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollTopBtn.style.display = 'block';
+        } else {
+            scrollTopBtn.style.display = 'none';
+        }
+    };
+
+    document.getElementById('scrollTop').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+<style>
+
+    /* Scroll to Top Button Styling */
+    #scrollTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #scrollTop:hover {
+        background: #0056b3;
+    }
+</style>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+</body>
+</html>
