@@ -264,10 +264,59 @@
             <span class="typed-text" id="typed-text"></span>
             <span class="cursor">|</span>
         </p>
-        <a href="#contact" class="btn btn-light btn-lg mt-3">
-            <i class="fa-solid fa-paper-plane"></i> Get in Touch
-        </a>
-    </div>
+      <a href="#contact" class="btn btn-light btn-lg mt-3 animated-btn">
+  <span class="icon rocket"><i class="fa-solid fa-rocket"></i></span>
+  <span class="icon phone d-none"><i class="fa-solid fa-phone-volume"></i></span>
+  <span class="text">Get in Touch</span>
+</a> 
+	    <style>
+.animated-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rocket.fly {
+  animation: flyRocket 1s ease-in-out forwards;
+}
+
+.phone.ring {
+  animation: ringPhone 1.2s ease-in-out infinite;
+}
+
+@keyframes flyRocket {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-30px) rotate(-30deg);
+  }
+  100% {
+    transform: translateY(-100px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes ringPhone {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-15deg); }
+  60% { transform: rotate(15deg); }
+  80% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+</style>
+
+ </div>
 </header>
 
 <!-- CSS for Color Changing Effect -->
@@ -895,6 +944,29 @@
 
 <!-- Scroll to Top Button -->
 <button id="scrollTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+	<script>
+  const button = document.querySelector('.animated-btn');
+  const rocket = document.querySelector('.icon.rocket');
+  const phone = document.querySelector('.icon.phone');
+
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    rocket.classList.add('fly');
+
+    setTimeout(() => {
+      rocket.classList.add('d-none');
+      phone.classList.remove('d-none');
+      phone.classList.add('ring');
+    }, 1000); // Wait for rocket animation to complete
+
+    setTimeout(() => {
+      phone.classList.remove('ring');
+    }, 4000); // Stop phone ringing
+  });
+</script>
+
 
 </body>
 </html>
