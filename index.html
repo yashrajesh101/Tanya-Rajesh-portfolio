@@ -409,55 +409,74 @@
       animation: spin 20s linear infinite;
     }
 
-    .logo {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 40px;
-      border-radius: 50%;
-      color: white;
-      backface-visibility: hidden;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    }
-
-    .logo:nth-child(1) {
-      background: #FF0000; /* YouTube */
-      transform: rotateY(0deg) translateZ(200px);
-    }
-
-    .logo:nth-child(2) {
-      background: #1DA1F2; /* Twitter */
-      transform: rotateY(60deg) translateZ(200px);
-    }
-
-    .logo:nth-child(3) {
-      background: #4285F4; /* Google */
-      transform: rotateY(120deg) translateZ(200px);
-    }
-
-    .logo:nth-child(4) {
-      background: #25D366; /* WhatsApp */
-      transform: rotateY(180deg) translateZ(200px);
-    }
-
-    .logo:nth-child(5) {
-      background: #3b5998; /* Facebook */
-      transform: rotateY(240deg) translateZ(200px);
-    }
-
-    .logo:nth-child(6) {
-      background: #E1306C; /* Instagram */
-      transform: rotateY(300deg) translateZ(200px);
-    }
-
-     .logo:nth-child(7) {
-  background: #FFFC00; /* Snapchat */
-  color: black; /* Black icon for better contrast */
-  transform: rotateY(308.57deg) translateZ(200px);
+   .logo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  border-radius: 50%;
+  color: white;
+  backface-visibility: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* YouTube */
+.logo:nth-child(1) {
+  background: #FF0000;
+  transform: rotateY(0deg) translateZ(200px);
+  box-shadow: 0 0 25px #FF0000;
+}
+
+/* Twitter */
+.logo:nth-child(2) {
+  background: #1DA1F2;
+  transform: rotateY(51.43deg) translateZ(200px);
+  box-shadow: 0 0 25px #1DA1F2;
+}
+
+/* Google */
+.logo:nth-child(3) {
+  background: #4285F4;
+  transform: rotateY(102.86deg) translateZ(200px);
+  box-shadow: 0 0 25px #4285F4;
+}
+
+/* WhatsApp */
+.logo:nth-child(4) {
+  background: #25D366;
+  transform: rotateY(154.29deg) translateZ(200px);
+  box-shadow: 0 0 25px #25D366;
+}
+
+/* Facebook */
+.logo:nth-child(5) {
+  background: #3b5998;
+  transform: rotateY(205.72deg) translateZ(200px);
+  box-shadow: 0 0 25px #3b5998;
+}
+
+/* Instagram */
+.logo:nth-child(6) {
+  background: #E1306C;
+  transform: rotateY(257.15deg) translateZ(200px);
+  box-shadow: 0 0 25px #E1306C;
+}
+
+/* Snapchat */
+.logo:nth-child(7) {
+  background: #FFFC00;
+  color: black;
+  transform: rotateY(308.58deg) translateZ(200px);
+  box-shadow: 0 0 25px #FFFC00;
+}
+
 	
 
     @keyframes spin {
